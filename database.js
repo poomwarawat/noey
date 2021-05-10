@@ -1,16 +1,10 @@
 const mysql = require("mysql");
-const Connection = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
-    database:'login'
-})
-Connection.connect(err => {
-    if(err) throw(err);
-    else{
-        console.log("MySQL connected");
-    }
-})
 
+const con = mysql.createConnection({
+  host: "tbegin.crjp8zi4ulpc.ap-southeast-1.rds.amazonaws.com",
+  user: "root",
+  password: "12345678",
+  database: "noey",
+});
 
-module.exports=Connection;
+module.exports = con;
